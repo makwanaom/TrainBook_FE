@@ -10,7 +10,7 @@ const Navbar = () => {
           <Link to="/" className="px-4 py-2 hover:underline">Home</Link>
           <Link to="/signup" className="px-4 py-2 hover:underline">Signup</Link>
           <Link to="/login" className="px-4 py-2 hover:underline">Login</Link>
-          <Link to="/seats" className="px-4 py-2 hover:underline">Seat Booking</Link>
+       
 
         </div>
       </div>
