@@ -14,7 +14,7 @@ const Home = () => {
   const fetchSeats = async () => {
     try {
       const token = localStorage.getItem("token"); // Assuming the token is stored in localStorage after login
-      const response = await axios.get("http://localhost:5000/api/seats/availability", {
+      const response = await axios.get("https://trainbook-be.onrender.com/api/seats/availability", {
         headers: { Authorization: `Bearer ${token}` },
       });
 
@@ -49,7 +49,7 @@ const Home = () => {
     try {
       const token = localStorage.getItem("token");
       const response = await axios.post(
-        "http://localhost:5000/api/seats/reserve",
+        "https://trainbook-be.onrender.com/api/seats/reserve",
         { count: seatCount },
         { headers: { Authorization: `Bearer ${token}` } }
       );
@@ -77,7 +77,7 @@ const Home = () => {
   // Handle refresh button click
   const handleRefresh = () => {
     setSeats(new Array(totalSeats).fill("available")); // Reset all seats to available
-    setSeatCount(0); // Reset seat count
+    setSeatCount(0); 
     fetchSeats(); // Fetch the latest seat data from backend
   };
 
